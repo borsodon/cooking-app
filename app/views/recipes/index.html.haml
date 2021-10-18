@@ -6,7 +6,7 @@
 =form_tag(recipes_path, method: :get) do
   =text_field_tag(:search, params[:search])
   =submit_tag("Search")
-- if @recipes.exists?
+- if @recipes.present?
   - @recipes.each do |recipe|
     %ul
       %li=link_to recipe.name, recipe_path(recipe)

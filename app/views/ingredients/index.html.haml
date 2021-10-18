@@ -7,7 +7,7 @@
   =text_field_tag(:search, params[:search])
   =submit_tag("Search")
 
-- if @ingredients.exists?
+- if @ingredients.present?
   - @ingredients.each do |ingredient|
     %ul
       %li=ingredient.name

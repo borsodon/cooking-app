@@ -1,0 +1,20 @@
+%h1 Ingredients
+
+=link_to "Back to recipes", recipes_path
+
+%h2 Seach by name
+=form_tag(ingredients_path, method: :get) do
+  =text_field_tag(:search, params[:search])
+  =submit_tag("Search")
+
+- if @ingredients.exists?
+  - @ingredients.each do |ingredient|
+    %ul
+      %li=ingredient.name
+- else
+  %h3 No "#{params[:search]}" ingredient found.
+
+= will_paginate @ingredients
+
+
+  

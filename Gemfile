@@ -5,6 +5,7 @@ ruby '2.7.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.7'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
@@ -25,6 +26,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'json'
 # For haml
 gem 'haml'
+# For pagination
+gem 'will_paginate', '~> 3.3'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

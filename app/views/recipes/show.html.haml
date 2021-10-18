@@ -1,0 +1,17 @@
+%h1 Recipe of #{@recipe.name}
+
+%h3 Author: #{@recipe.author.name}
+%h3 Rate: #{@recipe.rate}
+%h3 Difficulty: #{@recipe.difficulty}
+%h3 Budget: #{@recipe.budget}
+%h3 Preparation Time: #{@recipe.prep_time}
+%h3 Total Time: #{@recipe.total_time}
+%h3 People Quantity: #{@recipe.people_quantity}
+%h3 Author Tip: #{@recipe.author_tip}
+%h3 Cook Time: #{@recipe.cook_time}
+%h3 Number of comments: #{@recipe.nb_comments}
+%h3 Image: 
+=link_to(image_tag(@recipe.image, :border => "0"))
+%br
+=link_to "Back to recipes", recipes_path
+  
